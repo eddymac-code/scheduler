@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: url(./images/bk1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.container{
+  background: transparent;
+  width: 90%;
+  margin: auto;
+}
