@@ -11,6 +11,10 @@ var showTheTime = function(){
   var m = theTime.getMinutes();
   var s = theTime.getSeconds();
 
+  if (m < 10){
+    m = "0" + m;
+  }
+  
   if (s < 10){
     s = "0" + s;
   }
@@ -36,23 +40,23 @@ var updateTheTime = function(){
   }
   
   else if(h >= 13 && h < 14){
-   infoMessage = "Lunchtime";
+   infoMessage = "Lunchtime!";
   }
   
   else if(h >= 14 && h < 16){
-   infoMessage = "Socialize and enjoy";
+   infoMessage = "Socialize and enjoy!";
   }
   
   else if(h >= 16 && h < 18){
-   infoMessage = "Time for workout and refreshment";
+   infoMessage = "Workout and refreshment";
   }
   
   else if(h >= 18 && h < 22){
-   infoMessage = "Time for active rest";
+   infoMessage = "Active rest";
   }
   
   else{
-   infoMessage = "You should be in bed";
+   infoMessage = "Bedtime!";
   }
 
   console.log(infoMessage);

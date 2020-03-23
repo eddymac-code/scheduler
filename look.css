@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Aclonica|Monoton|Orbitron|Quantico|Titillium+Web&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -9,10 +11,69 @@ body{
   background-size: cover;
   height: 100vh;
   color: #ffffff;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .container{
   background: transparent;
   width: 90%;
   margin: auto;
+}
+
+header{
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1{
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: 'Monoton', cursive;
+}
+
+section{
+  background: #cec8c8;
+  color: #333333;
+  width: 24rem;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 3rem;
+}
+
+section h1{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+section p{
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+#day{
+  font-family: 'Quantico', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  padding: 1.5rem 0 0 0;
+}
+
+#time{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+}
+
+#message{
+  padding: 1.5rem 0 0 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Aclonica', sans-serif;
+}
+
+footer{
+  padding: 4rem 5rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
