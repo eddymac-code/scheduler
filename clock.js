@@ -1,38 +1,66 @@
-var d = new Date();
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-document.getElementById("day").innerHTML = days[d.getDay()];
+var showTheTime = function(){
 
-var clock = document.getElementById("time");
-var h = d.getHours();
-var m = d.getMinutes();
-var s = d.getSeconds();
-var theTime = h + ":" + m + ":" + s;
-clock.innerHTML = theTime;
+  var calen = document.getElementById("day");
+  var clock = document.getElementById("time");
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-if(h >= 5 || h < 8){
-  document.getElementById("message").innerHTML = "Breakfast and checking emails";
-}
+  var theTime = new Date();
 
-if(h >= 8 || h < 13){
-  document.getElementById("message").innerHTML = "Code";
-}
+  var d = days[theTime.getDay()];
+  var h = theTime.getHours();
+  var m = theTime.getMinutes();
+  var s = theTime.getSeconds();
 
-if(h >= 13 || h < 14){
-  document.getElementById("message").innerHTML = "Lunchtime";
-}
+  if (s < 10){
+    s = "0" + s;
+  }
 
-if(h >= 14 || h < 16){
-  document.getElementById("message").innerHTML = "Socialize and enjoy";
-}
+  var theTime = h + ":" + m + ":" + s;
 
-if(h >= 16 || h < 18){
-  document.getElementById("message").innerHTML = "Time for workout and refreshment";
-}
+  calen.innerHTML = d;
 
-if(h >= 18 || h < 22){
-  document.getElementById("message").innerHTML = "Time for active rest";
-}
+  clock.innerHTML = theTime;
+};
 
-if(h >= 22 || h < 5){
-  msg.innerHTML = "You should be in bed";
-}
+var updateTheTime = function(){
+  var scheduled = document.getElementById("message");
+  var infoMessage;
+  var h = new Date().getHours();
+
+  if(h >= 5 && h < 8){
+   infoMessage = "Breakfast and checking emails";
+  }
+  
+  else if(h >= 8 && h < 13){
+   infoMessage = "Code";
+  }
+  
+  else if(h >= 13 && h < 14){
+   infoMessage = "Lunchtime";
+  }
+  
+  else if(h >= 14 && h < 16){
+   infoMessage = "Socialize and enjoy";
+  }
+  
+  else if(h >= 16 && h < 18){
+   infoMessage = "Time for workout and refreshment";
+  }
+  
+  else if(h >= 18 && h < 22){
+   infoMessage = "Time for active rest";
+  }
+  
+  else{
+   infoMessage = "You should be in bed";
+  }
+
+  console.log(infoMessage);
+  scheduled.innerHTML = infoMessage;
+
+  showTheTime();
+};
+
+updateTheTime();
+
+setInterval(updateTheTime, 1000);
