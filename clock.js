@@ -2,7 +2,7 @@ var showTheTime = function(){
 
   var calen = document.getElementById("day");
   var clock = document.getElementById("time");
-  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   var theTime = new Date();
 
@@ -19,11 +19,11 @@ var showTheTime = function(){
     s = "0" + s;
   }
 
-  var theTime = h + ":" + m + ":" + s;
+  var nowTime = h + ":" + m + ":" + s;
 
   calen.innerHTML = d;
 
-  clock.innerHTML = theTime;
+  clock.innerHTML = nowTime;
 };
 
 var updateTheTime = function(){
